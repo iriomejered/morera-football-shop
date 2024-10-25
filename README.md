@@ -6,11 +6,6 @@ Morera Football Shop
 
 The best shop in the world, where you will be able to buy any shirt of your preference
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
 ## Authors
 
   - **Iriome Matos González**
