@@ -1,4 +1,4 @@
-const FECHA_DESTINO = new Date("Nov 18, 2024 19:45:00").getTime();
+const FECHA_DESTINO = new Date("Nov 22, 2024 17:00:00").getTime();
 
 const INTERVAL = setInterval(function() {
     const AHORA = new Date().getTime();

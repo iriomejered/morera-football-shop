@@ -2,6 +2,8 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 
 .gallery-item img, .gallery-item .gif {
@@ -11,22 +13,12 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-.image-default {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-}
-
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 32px;
     background-color: rgb(255, 0, 0);
     border: 1px solid rgb(255, 0, 0);
     border-bottom: 4px solid rgb(0, 128, 0);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-left: 10px;
     padding-right: 20px;
 }
@@ -39,10 +31,8 @@ body {
     border-bottom: 1px solid rgb(0, 128, 0);
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 10px;
 }
-
-
 
 .gallery-container {
     display: flex;
@@ -72,14 +62,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 .footer-right {
-    display: flex;
-    gap: 25px;
+    gap: 40px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -201,7 +189,14 @@ body {
         padding: 10px;
         display: flex;
         flex-flow: row;
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .register {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 32px;
+        color: inherit;
+        text-decoration: none;
     }
 
     .subtitle {
@@ -214,7 +209,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        padding-top: 800px;
+        padding-top: 700px;
     }
 
     .timer-container {
@@ -234,9 +229,14 @@ body {
     }
     
     .gallery-item {
-        background-color: rgb(220,220,220);
-        width: 14.5%;
-        height: 14.5%;
+        background-color: rgb(255,255,255);
+        width: 14%;
+        height: 14%;
+        transition: transform 0.3s ease
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.1);
     }
 
     .shop-container {
@@ -245,6 +245,7 @@ body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 30px;
         color: black;
+        font-weight: bold;
     }
 
     .news {
@@ -253,6 +254,7 @@ body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 30px;
         color: black;
+        font-weight: bold;
     }
 
     .news-img {
@@ -267,15 +269,20 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        padding-bottom: 500px;
-        gap: 20px;
+        padding-bottom: 50px;
+        gap: 50px;
     }
 
     .news-item {
         background-color: white;
         display: flex;
         flex-flow: row;
-        width: 48%;
+        width: 46%;
+        transition: transform 0.3s ease
+    }
+
+    .news-item:hover {
+        transform: scale(1.06);
     }
 
     .news-title {
@@ -292,15 +299,15 @@ body {
     }
 
     .footer {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .footer-left {
         width: 40%;
     }
 
-    .footer-right {
-        gap: 25px;
-        padding-right: 25px;
+    .footer-right a{
+        gap: 150px;
+        padding-right: 10px;
     }
 }

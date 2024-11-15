@@ -1,0 +1,160 @@
+:root {
+  --primary-color: rgb(44, 44, 185);
+  --primary-color-inverse: aliceblue;
+  --input-color: aliceblue;
+  --input-color-focus: lightyellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  border-bottom: 4px solid rgb(0, 128, 0);
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  background-color: rgb(0, 128, 0);
+  border-top: 1px solid rgb(0, 128, 0);
+  border-bottom: 1px solid rgb(0, 128, 0);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  background-color: rgb(0, 128, 0);
+  border: 1px solid rgb(0, 128, 0);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-right {
+  gap: 20px;
+  padding-right: 25px;
+}
+
+.footer-left {
+  width: 40%;
+}
+
+.footer-right a{
+  gap: 150px;
+  padding-right: 10px;
+}
+
+.container {
+  padding-top: 4vh;
+  height: 50%;
+  font-weight: bold;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1{
+  padding-bottom: 4vh;
+}
+
+.item {
+  width: 50%;
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+#personal-data-form {
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#personal-data-form>input {
+  width: 100%;
+}
+
+#personal-data-form>label {
+  margin: .5em 0;
+  width: 100%;
+}
+
+.form-submit {
+  width: 100%;
+  margin: .5em 0;
+  text-align: right;
+}
+
+.form-submit>button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+
+  padding: .5em 1em;
+  border-radius: 5px;
+
+  background-color: var(--primary-color);
+  color: var(--primary-color-inverse);
+}
+
+#personal-data-form span {
+  color: lightcoral;
+  visibility: hidden;
+}
+
+#personal-data-form input[type=text] {
+  border-radius: 5px;
+  border: 2px black solid;
+  background-color: var(--input-color);
+  padding: 1em;
+}
+
+#personal-data-form input[type=text]:focus {
+  background-color: var(--input-color-focus);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
