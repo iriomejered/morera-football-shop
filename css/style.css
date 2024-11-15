@@ -6,12 +6,10 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.gallery-item img,
-.gallery-item .gif {
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .title {
@@ -39,6 +37,27 @@ body {
     padding: 10px;
 }
 
+.footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(0, 128, 0);
+    border: 1px solid rgb(0, 128, 0);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 0px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.footer-right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
 .gallery-container {
     background-color: rgb(220, 220, 220);
     display: flex;
@@ -54,116 +73,299 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease
 }
+.news {
+    background-color: rgb(255, 128, 128);
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.news-img {
+    width: 65%;
+}
+
+.news-container {
+    background-color: rgb(255, 128, 128);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.news-item {
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+    width: 46vw;
+    transition: transform 0.3s ease
+}
+
+.news-item:hover {
+    transform: scale(1.06);
+}
+
+.news-title {
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: rgb(128, 0, 0);
+    padding-left: 4px;
+}
+
+.news-content {
+    font-size: 1vw;
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+}
+
+.comments {
+    background-color: rgb(128, 255, 128);
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.comments-container {
+    background-color: rgb(128, 255, 128);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.comments-container a{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.mb-3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.mb-3 label{
+    width: 320px;
+}
+
+:root {
+    --primary-color: rgb(44, 44, 185);
+    --primary-color-inverse: aliceblue;
+    --input-color: aliceblue;
+    --input-color-focus: lightyellow;
+}
+
+.form-submit {
+    width: 100%;
+    margin: .5em 0;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.form-submit>button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+
+    padding: .5em 1em;
+    border-radius: 5px;
+
+    background-color: var(--primary-color);
+    color: var(--primary-color-inverse);
+}
+
+#comment-message {
+    width: 60%;
+}
+
+.comment-name {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.comment-message {
+    font-size: 0.75em;
+    color: rgb(64,64,64);
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.cr7-container {
+    background-image: url(cr7-ucl.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 30%;
+}
+
+.timer-container {
+    background-color: rgb(64, 64, 64);
+    padding: 14px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.gallery-container {
+    background-color: rgb(220, 220, 220);
+    gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.shop-container {
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /* .title {
-        font-size: 10px;
+    .title {
+      font-size: 20px;
+    }
+  
+    .subtitle {
+      font-size: 12px;
     }
 
-    .subtitle {
+    .timer-container{
         font-size: 12px;
     }
 
-    .gallery-container {
-        padding-bottom: 100px;
+    .shop-container{
+        font-size: 15px;
     }
 
     .gallery-item {
         width: 45%;
         height: 45%;
     }
-
-    .footer {
-        font-size: 10px;
+  
+    .footer{
+      font-size: 10px;
     }
-
-    .footer-left {
-        width: 160px;
-    }
-
+  
     .footer-right {
-        gap: 12px;
-        padding-right: 10px;
+      padding-right: 0px;
+      width: 340px;
+    }
+    
+    .footer-left {
+      width: 160px;
+    }
+    
+    .footer-right a{
+      width: 70px;
     }
 
-    .footer-right a {
-        width: 62px;
-    } */
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    /* .title {
-        font-size: 12px;
+    .news-item {
+        width: 95vw;
     }
 
+    .news-title {
+        font-weight: bold;
+        font-size: 2.5vw;
+        color: rgb(128, 0, 0);
+        padding-left: 4px;
+    }
+    
+    .news-content {
+        font-size: 2vw;
+        color: rgb(0, 0, 0);
+        padding-top: 20px;
+    }
+
+    .news-container {
+        gap: 10px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .title {
+      font-size: 26px;
+    }
+  
     .subtitle {
-        font-size: 14px;
+      font-size: 16px;
+    }
+  
+    .timer-container{
+        font-size: 15px;
     }
 
-    .gallery-container {
-        padding-bottom: 85px;
+    .shop-container{
+        font-size: 18px;
     }
 
     .gallery-item {
-        width: 29%;
-        height: 29%;
+        width: 28%;
+        height: 28%;
     }
 
-    .footer {
-        font-size: 10px;
+    .footer{
+      font-size: 13px;
     }
-
-    .footer-left {
-        width: 160px;
-    }
-
+  
     .footer-right {
-        gap: 15px;
-        padding-right: 25px;
+      padding-right: 0px;
+      width: 370px;
     }
-
-    .footer-right a {
-        width: 70px;
-    } */
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    /* .title {
-        font-size: 14px;
-    }
-
-    .subtitle {
-        font-size: 17px;
-    }
-
-    .gallery-container {
-        padding-bottom: 80px;
-    }
-
-    .gallery-item {
-        width: 22%;
-        height: 22%;
-    }
-
-    .footer {
-        font-size: 12px;
-    }
-
+    
     .footer-left {
-        width: 38%;
+      width: 200px;
+    }
+    
+    .footer-right a{
+      width: 90px;
     }
 
-    .footer-right {
+    .news-container {
         gap: 20px;
-        padding-right: 25px;
-    } */
-}
+    }
+    
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {}
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -182,32 +384,12 @@ body {
         font-size: 20px;
     }
 
-    .cr7-container {
-        background-image: url(cr7-ucl.jpg);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        padding-top: 700px;
-    }
-
-    .timer-container {
-        background-color: rgb(64, 64, 64);
-        padding: 14px;
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .timer-container{
         font-size: 30px;
-        color: white;
     }
 
-    .gallery-container {
-        background-color: rgb(220, 220, 220);
-        gap: 20px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 40px;
+    .shop-container{
+        font-size: 30px;
     }
 
     .gallery-item {
@@ -215,186 +397,25 @@ body {
         height: 14%;
     }
 
-    .gallery-item:hover {
-        transform: scale(1.1);
-    }
-
-    .shop-container {
-        background-color: rgb(220, 220, 220);
-        padding: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        font-weight: bold;
-    }
-
-    .news {
-        background-color: rgb(255, 128, 128);
-        padding: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        font-weight: bold;
-    }
-
-    .news-img {
-        width: 65%;
-    }
-
     .news-container {
-        background-color: rgb(255, 128, 128);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        padding-bottom: 50px;
         gap: 50px;
     }
 
-    .news-item {
-        background-color: white;
-        display: flex;
-        flex-flow: row;
-        width: 46%;
-        transition: transform 0.3s ease
-    }
-
-    .news-item:hover {
-        transform: scale(1.06);
-    }
-
-    .news-title {
-        font-weight: bold;
-        font-size: 25px;
-        color: rgb(128, 0, 0);
-        padding-left: 4px;
-    }
-
-    .news-content {
-        font-size: 18px;
-        color: rgb(0, 0, 0);
-        padding-top: 20px;
-    }
-
-    .comments {
-        background-color: rgb(128, 255, 128);
-        padding: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        font-weight: bold;
-    }
-
-    .comments-container {
-        background-color: rgb(128, 255, 128);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
-        padding-bottom: 50px;
-    }
-
-    .comments-container a{
-        padding-top: 10px;
-        padding-left: 20px;
-    }
-
-    .mb-3 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 30px;
-        color: black;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        padding-left: 20px;
-    }
-
-    .mb-3 label{
-        width: 200px;
-    }
-    
-    :root {
-        --primary-color: rgb(44, 44, 185);
-        --primary-color-inverse: aliceblue;
-        --input-color: aliceblue;
-        --input-color-focus: lightyellow;
-    }
-
-    .form-submit {
-        width: 100%;
-        margin: .5em 0;
-        text-align: left;
-        padding-left: 20px;
-    }
-
-    .form-submit>button {
-        font-family: "Montserrat", sans-serif;
-        font-size: 16px;
-
-        padding: .5em 1em;
-        border-radius: 5px;
-
-        background-color: var(--primary-color);
-        color: var(--primary-color-inverse);
-    }
-
-    #comment-message {
-        width: 80%;
-    }
-
-    .comment-name {
-        font-size: 1em;
-        font-weight: bold;
-    }
-    
-    .comment-message {
-        font-size: 0.75em;
-        color: rgb(64,64,64);
-    }
-
-    .delete-btn {
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    .delete-btn:hover {
-        background-color: darkred;
-    }
-
-    .footer {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .footer{
         font-size: 20px;
-        background-color: rgb(0, 128, 0);
-        border: 1px solid rgb(0, 128, 0);
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .footer-left {
-        width: 40%;
     }
 
     .footer-right {
-        gap: 20px;
-        padding-right: 25px;
+      gap: 20px;
+      padding-right: 10px;
+      width: 900px;
     }
-
-    .footer-right a {
-        gap: 150px;
-        padding-right: 10px;
+  
+    .footer-left {
+      width: 320px;
+    }
+      
+    .footer-right a{
+      width: auto;
     }
 }

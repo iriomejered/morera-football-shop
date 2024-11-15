@@ -1,9 +1,13 @@
 let comments = JSON.parse(localStorage.getItem("COMMENTS")) || [];
 
 const COMMENT_FORM = document.getElementById("comment-form");
-const COMMENT_NAME = document.getElementById("comment-name");
 const COMMENT_MESSAGE = document.getElementById("comment-message");
 const COMMENT_LIST = document.getElementById("comment-list");
+
+// Comprobar si el usuario está registrado
+function isUserRegistered() {
+    return localStorage.getItem("name") !== null;
+}
 
 // Renderizar los comentarios
 function renderComments() {
@@ -30,11 +34,16 @@ function saveComments() {
 COMMENT_FORM.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = COMMENT_NAME.value.trim();
+    if (!isUserRegistered()) {
+        alert("Necesitas registrarte para poder comentar.");
+        return;
+    }
+
+    const name = localStorage.getItem("name"); // Obtener el nombre desde localStorage
     const message = COMMENT_MESSAGE.value.trim();
 
-    if (name === "" || message === "") {
-        alert("Por favor, llena ambos campos antes de enviar tu comentario.");
+    if (message === "") {
+        alert("Por favor, escribe un comentario antes de enviarlo.");
         return;
     }
 

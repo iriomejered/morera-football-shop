@@ -21,7 +21,6 @@ body {
 
 .title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 32px;
   background-color: rgb(255, 0, 0);
   border: 1px solid rgb(255, 0, 0);
   border-bottom: 4px solid rgb(0, 128, 0);
@@ -33,7 +32,6 @@ body {
 
 .subtitle {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
   background-color: rgb(0, 128, 0);
   border-top: 1px solid rgb(0, 128, 0);
   border-bottom: 1px solid rgb(0, 128, 0);
@@ -44,7 +42,6 @@ body {
 
 .footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
   background-color: rgb(0, 128, 0);
   border: 1px solid rgb(0, 128, 0);
   display: flex;
@@ -52,23 +49,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  padding-right: 0px;
   bottom: 0;
   position: fixed;
   width: 100%;
 }
 
 .footer-right {
-  gap: 20px;
-  padding-right: 25px;
-}
-
-.footer-left {
-  width: 40%;
-}
-
-.footer-right a{
-  gap: 150px;
-  padding-right: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 .container {
@@ -84,12 +74,6 @@ body {
 
 .container h1{
   padding-bottom: 4vh;
-}
-
-.item {
-  width: 50%;
-  border: 2px black solid;
-  border-radius: 5px;
 }
 
 #personal-data-form {
@@ -145,10 +129,72 @@ body {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+  
+  .item {
+    width: 85%;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+
+  .footer{
+    font-size: 10px;
+  }
+
+  .footer-right {
+    padding-right: 0px;
+    width: 340px;
+  }
+  
+  .footer-left {
+    width: 160px;
+  }
+  
+  .footer-right a{
+    width: 70px;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .item {
+    width: 75%;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+
+  .footer{
+    font-size: 13px;
+  }
+
+  .footer-right {
+    padding-right: 0px;
+    width: 370px;
+  }
+  
+  .footer-left {
+    width: 200px;
+  }
+  
+  .footer-right a{
+    width: 90px;
+  }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
@@ -157,4 +203,36 @@ body {
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .item {
+    width: 70%;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+
+  .footer{
+    font-size: 20px;
+  }
+
+  .footer-right {
+    gap: 20px;
+    padding-right: 10px;
+    width: 900px;
+  }
+
+  .footer-left {
+    width: 320px;
+  }
+    
+  .footer-right a{
+    width: auto;
+  }
+}

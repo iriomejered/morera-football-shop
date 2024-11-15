@@ -1,8 +1,4 @@
-# Project Title
-
-Cristiano Ronaldo Official Website
-
-## Getting Started
+# Cristiano Ronaldo Official Website
 
 A website where you can see everything about Cristiano Ronaldo
 
@@ -16,3 +12,4 @@ A website where you can see everything about Cristiano Ronaldo
   - FontAwesome
   - Inspiration from (https://dribbble.com/shots/24095196-Fashion-E-Commerce-App)
   - Tiburcio Cruz
+  
