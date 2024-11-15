@@ -18,27 +18,12 @@ body {
     opacity: 1;
 }
 
-.image-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.gallery-item:hover .image-default {
-    opacity: 0;
-}
-
-.gallery-item:hover .image-hover {
-    opacity: 1;
-}
-
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    background-color: rgb(170, 255, 255);
-    border: 1px solid rgb(170, 255, 255);
-    border-bottom: 4px solid rgb(170, 230, 230);
+    font-size: 32px;
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    border-bottom: 4px solid rgb(0, 128, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,21 +34,15 @@ body {
 .subtitle {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    background-color: rgb(185, 230, 230);
-    border-top: 1px solid rgb(185, 230, 230);
-    border-bottom: 1px solid rgb(185, 230, 230);
+    background-color: rgb(0, 128, 0);
+    border-top: 1px solid rgb(0, 128, 0);
+    border-bottom: 1px solid rgb(0, 128, 0);
     display: flex;
     justify-content: center;
-    padding: 0px;
+    padding: 5px;
 }
 
-.search-input {
-    width: 60%;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
+
 
 .gallery-container {
     display: flex;
@@ -78,7 +57,7 @@ body {
     position: relative;
     width: 14.5%;
     height: 14.5%;
-    border: 3px solid black;
+    border: 6px solid black;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -86,8 +65,8 @@ body {
 .footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
-    background-color: rgb(170, 255, 255);
-    border: 1px solid rgb(170, 255, 255);
+    background-color: rgb(0, 128, 0);
+    border: 1px solid rgb(0, 128, 0);
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -107,11 +86,6 @@ body {
 @media only screen and (max-width: 600px){
     .title {
         font-size: 10px;
-    }
-
-    .search-input {
-        width: 36%;
-        font-size: 12px;
     }
 
     .subtitle {
@@ -146,14 +120,9 @@ body {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 992px){
+@media only screen and (min-width: 600px){
     .title {
         font-size: 12px;
-    }
-
-    .search-input {
-        width: 40%;
-        font-size: 14px;
     }
 
     .subtitle {
@@ -198,11 +167,6 @@ body {
         font-size: 14px;
     }
 
-    .search-input {
-        width: 55%;
-        font-size: 16px;
-    }
-
     .subtitle {
         font-size: 17px;
     }
@@ -233,25 +197,98 @@ body {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .title {
-        font-size: 16px;
-    }
-
-    .search-input {
-        width: 60%;
-        font-size: 18px;
+        font-size: 32px;
+        padding: 10px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
     }
 
     .subtitle {
         font-size: 20px;
     }
 
+    .cr7-container {
+        background-image: url(cr7-ucl.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-top: 800px;
+    }
+
+    .timer-container {
+        background-color: rgb(64,64,64);
+        padding: 14px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
     .gallery-container {
-        padding-bottom: 0px;
+        background-color: rgb(220,220,220);
+        padding-bottom: 40px;
     }
     
     .gallery-item {
+        background-color: rgb(220,220,220);
         width: 14.5%;
         height: 14.5%;
+    }
+
+    .shop-container {
+        background-color: rgb(220,220,220);
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        color: black;
+    }
+
+    .news {
+        background-color: rgb(255,128,128);
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        color: black;
+    }
+
+    .news-img {
+        width: 65%;
+    }
+
+    .news-container {
+        background-color: rgb(255,128,128);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        color: black;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-bottom: 500px;
+        gap: 20px;
+    }
+
+    .news-item {
+        background-color: white;
+        display: flex;
+        flex-flow: row;
+        width: 48%;
+    }
+
+    .news-title {
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(128, 0, 0);
+        padding-left: 4px;
+    }
+    
+    .news-content {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        padding-top: 20px;
     }
 
     .footer {
