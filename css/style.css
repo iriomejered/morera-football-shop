@@ -20,8 +20,12 @@ body {
     background-color: rgb(255, 0, 0);
     border: 1px solid rgb(255, 0, 0);
     border-bottom: 4px solid rgb(0, 128, 0);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     padding-left: 10px;
     padding-right: 20px;
+    padding: 10px;
 }
 
 .subtitle {
@@ -36,44 +40,24 @@ body {
 }
 
 .gallery-container {
+    background-color: rgb(220, 220, 220);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
-    padding-top: 10px;
 }
 
 .gallery-item {
+    background-color: rgb(255, 255, 255);
     position: relative;
-    width: 14.5%;
-    height: 14.5%;
     border: 6px solid black;
     border-radius: 16px;
     overflow: hidden;
-}
-
-.footer {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-    background-color: rgb(0, 128, 0);
-    border: 1px solid rgb(0, 128, 0);
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-right {
-    gap: 40px;
+    transition: transform 0.3s ease
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .title {
+    /* .title {
         font-size: 10px;
     }
 
@@ -105,12 +89,12 @@ body {
 
     .footer-right a {
         width: 62px;
-    }
+    } */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .title {
+    /* .title {
         font-size: 12px;
     }
 
@@ -142,7 +126,7 @@ body {
 
     .footer-right a {
         width: 70px;
-    }
+    } */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -150,7 +134,7 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .title {
+    /* .title {
         font-size: 14px;
     }
 
@@ -178,17 +162,13 @@ body {
     .footer-right {
         gap: 20px;
         padding-right: 25px;
-    }
+    } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .title {
         font-size: 32px;
-        padding: 10px;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
     }
 
     .register {
@@ -224,14 +204,15 @@ body {
 
     .gallery-container {
         background-color: rgb(220, 220, 220);
+        gap: 20px;
+        width: 100%;
+        padding-top: 10px;
         padding-bottom: 40px;
     }
 
     .gallery-item {
-        background-color: rgb(255, 255, 255);
         width: 14%;
         height: 14%;
-        transition: transform 0.3s ease
     }
 
     .gallery-item:hover {
@@ -390,11 +371,26 @@ body {
     }
 
     .footer {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20px;
+        background-color: rgb(0, 128, 0);
+        border: 1px solid rgb(0, 128, 0);
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
     }
 
     .footer-left {
         width: 40%;
+    }
+
+    .footer-right {
+        gap: 20px;
+        padding-right: 25px;
     }
 
     .footer-right a {

@@ -1,17 +1,15 @@
-// Almacenar los comentarios
-let comments = JSON.parse(localStorage.getItem("comments")) || [];
+let comments = JSON.parse(localStorage.getItem("COMMENTS")) || [];
 
-// Referencias al DOM
-const commentForm = document.getElementById("comment-form");
-const commentName = document.getElementById("comment-name");
-const commentMessage = document.getElementById("comment-message");
-const commentList = document.getElementById("comment-list");
+const COMMENT_FORM = document.getElementById("comment-form");
+const COMMENT_NAME = document.getElementById("comment-name");
+const COMMENT_MESSAGE = document.getElementById("comment-message");
+const COMMENT_LIST = document.getElementById("comment-list");
 
 // Renderizar los comentarios
 function renderComments() {
-    commentList.innerHTML = "";
+    COMMENT_LIST.innerHTML = "";
     comments.forEach((comment, index) => {
-        commentList.innerHTML += `
+        COMMENT_LIST.innerHTML += `
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto">
                     <div class="comment-name">${comment.name}</div>
@@ -25,25 +23,25 @@ function renderComments() {
 
 // Guardar comentarios en localStorage
 function saveComments() {
-    localStorage.setItem("comments", JSON.stringify(comments));
+    localStorage.setItem("COMMENTS", JSON.stringify(comments));
 }
 
 // Agregar un nuevo comentario
-commentForm.addEventListener("submit", (e) => {
+COMMENT_FORM.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = commentName.value.trim();
-    const message = commentMessage.value.trim();
+    const name = COMMENT_NAME.value.trim();
+    const message = COMMENT_MESSAGE.value.trim();
 
     if (name === "" || message === "") {
         alert("Por favor, llena ambos campos antes de enviar tu comentario.");
         return;
     }
 
-    comments.push({ name, message });
+    comments.push({name, message});
     saveComments();
     renderComments();
-    commentForm.reset();
+    COMMENT_FORM.reset();
 });
 
 // Eliminar un comentario
@@ -55,4 +53,5 @@ function deleteComment(index) {
     }
 }
 
+// Inicializar la renderización de comentarios
 renderComments();
