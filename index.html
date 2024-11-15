@@ -94,6 +94,29 @@
             </div>
         </div>
     </div>
+    <div class="comments">
+        <a>COMENTARIOS</a>
+    </div>
+    <div class="comments-container">
+        <form id="comment-form">
+            <div class="mb-3">
+                <label for="comment-name" class="form-label">Nombre</label>
+                <input type="text" id="comment-name" class="form-control" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+                <label for="comment-message" class="form-label">Comentario</label>
+                <input id="comment-message" class="form-control" placeholder="Escribe tu comentario"></input>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    
+        <a>Comentarios recientes:</a>
+        <ul id="comment-list" class="list-group">
+        </ul>
+    </div>
+    
     <footer class="footer">
         <div class="footer-left">
             <a>©2024 CR7 Página Oficial. Todos los derechos reservados</a>
@@ -106,6 +129,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/comments.js"></script>
 </body>
 
 </html>
