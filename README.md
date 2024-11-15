@@ -1,10 +1,10 @@
 # Project Title
 
-Morera Football Shop
+Cristiano Ronaldo Official Website
 
 ## Getting Started
 
-The best shop in the world, where you will be able to buy any shirt of your preference
+A website where you can see everything about Cristiano Ronaldo
 
 ## Authors
 
