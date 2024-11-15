@@ -6,7 +6,8 @@ function listenForValidation() {
 function validatePersonalDataForm(e) {
 
   const NAME = e.target.name.value;
-  const SURNAME = e.target.surname.value;
+  const SURNAME_1 = e.target["surname-1"].value;
+  const SURNAME_2 = e.target["surname-2"].value;
   const EMAIL = e.target.email.value;
 
   let valid = true;
@@ -16,10 +17,15 @@ function validatePersonalDataForm(e) {
     valid = false;
   } else document.getElementById("form-name").style.visibility = "hidden";
 
-  if (!SURNAME) {
-    document.getElementById("form-surname").style.visibility = "visible";
+  if (!SURNAME_1) {
+    document.getElementById("form-surname-1").style.visibility = "visible";
     valid = false;
-  } else document.getElementById("form-surname").style.visibility = "hidden";
+  } else document.getElementById("form-surname-1").style.visibility = "hidden";
+
+  if (!SURNAME_2) {
+    document.getElementById("form-surname-2").style.visibility = "visible";
+    valid = false;
+  } else document.getElementById("form-surname-2").style.visibility = "hidden";
 
   if (!EMAIL) {
     document.getElementById("form-email").style.visibility = "visible";
@@ -36,7 +42,7 @@ function validatePersonalDataForm(e) {
   if (!valid) {
     e.preventDefault();
   } else {
-    saveData(NAME, SURNAME, EMAIL);
+    saveData(NAME, SURNAME_1, SURNAME_2, EMAIL);
   }
 }
 
@@ -45,9 +51,10 @@ function validateEmail(email) {
   return EMAIL_REGEX.test(email);
 }
 
-function saveData(name, surname, email) {
+function saveData(name, surname_1, surname_2, email) {
   localStorage.setItem("name", name);
-  localStorage.setItem("surname", surname);
+  localStorage.setItem("surname-1", surname_1);
+  localStorage.setItem("surname-2", surname_2);
   localStorage.setItem("email", email);
 }
 
