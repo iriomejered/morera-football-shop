@@ -20,7 +20,8 @@ body {
 }
 
 .title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   background-color: rgb(255, 0, 0);
   border: 1px solid rgb(255, 0, 0);
   border-bottom: 4px solid rgb(0, 128, 0);
@@ -31,7 +32,8 @@ body {
 }
 
 .subtitle {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   background-color: rgb(0, 128, 0);
   border-top: 1px solid rgb(0, 128, 0);
   border-bottom: 1px solid rgb(0, 128, 0);
@@ -42,6 +44,7 @@ body {
 
 .container {
   padding-top: 4vh;
+  padding-bottom: 8vh;
   height: 50%;
   font-weight: bold;
 

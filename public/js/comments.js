@@ -25,7 +25,7 @@ function renderComments() {
     });
 }
 
-// Save the commens in the localStorage
+// Save the comments in the localStorage
 function saveComments() {
     localStorage.setItem("COMMENTS", JSON.stringify(comments));
 }
@@ -33,6 +33,7 @@ function saveComments() {
 // Add a new comment
 COMMENT_FORM.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log("Formulario enviado sin recargar la página.");
 
     if (!isUserRegistered()) {
         alert("Necesitas registrarte para poder comentar.");
