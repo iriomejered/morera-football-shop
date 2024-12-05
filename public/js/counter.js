@@ -10,7 +10,7 @@ const INTERVAL = setInterval(function() {
     const SEGUNDOS = Math.floor((DISTANCIA % (1000 * 60)) / 1000);
 
     document.getElementById("countdown").innerHTML = 
-        "SIGUIENTE PARTIDO: " + DIAS + "d " + HORAS + "h " + MINUTOS + "m " + SEGUNDOS + "s /";
+        "SIGUIENTE PARTIDO: " + DIAS + "d " + HORAS + "h " + MINUTOS + "m " + SEGUNDOS + "s";
 
     if (distancia < 0) {
         clearInterval(interval);

@@ -19,29 +19,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  background-color: rgb(255, 0, 0);
-  border: 1px solid rgb(255, 0, 0);
-  border-bottom: 4px solid rgb(0, 128, 0);
-  padding: 10px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-}
-
-.subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  background-color: rgb(0, 128, 0);
-  border-top: 1px solid rgb(0, 128, 0);
-  border-bottom: 1px solid rgb(0, 128, 0);
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
 .container {
   padding-top: 4vh;
   padding-bottom: 8vh;
@@ -112,14 +89,6 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .title {
-    font-size: 20px;
-  }
-
-  .subtitle {
-    font-size: 13px;
-  }
-  
   .item {
     width: 85%;
     border: 2px black solid;
@@ -129,14 +98,6 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .title {
-    font-size: 26px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-  }
-
   .item {
     width: 75%;
     border: 2px black solid;
@@ -152,14 +113,6 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .title {
-    font-size: 32px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
   .item {
     width: 70%;
     border: 2px black solid;

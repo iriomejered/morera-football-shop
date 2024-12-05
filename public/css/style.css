@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700&ver=6.5.5');
+
 body {
     margin: 0px;
     padding: 0px;
     border: 0px;
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .gallery-item img {
@@ -13,32 +14,6 @@ body {
     object-fit: cover;
 }
 
-.title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    background-color: rgb(255, 0, 0);
-    border: 1px solid rgb(255, 0, 0);
-    border-bottom: 4px solid rgb(0, 128, 0);
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding: 10px;
-}
-
-.subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    background-color: rgb(0, 128, 0);
-    border-top: 1px solid rgb(0, 128, 0);
-    border-bottom: 1px solid rgb(0, 128, 0);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
 .gallery-container {
     background-color: rgb(220, 220, 220);
     display: flex;
@@ -55,13 +30,12 @@ body {
     transition: transform 0.3s ease
 }
 .news {
-    background-color: rgb(255, 128, 128);
+    background-color: rgb(220, 0, 0);
     padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 34px;
     color: black;
-    font-weight: bold;
 }
 
 .news-img {
@@ -69,9 +43,8 @@ body {
 }
 
 .news-container {
-    background-color: rgb(255, 128, 128);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    background-color: rgb(220, 0, 0);
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     color: black;
     display: flex;
@@ -93,10 +66,10 @@ body {
 }
 
 .news-title {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 1.2vw;
     color: rgb(128, 0, 0);
-    padding-left: 4px;
+    padding: 10px;
 }
 
 .news-content {
@@ -106,21 +79,17 @@ body {
 }
 
 .comments {
-    background-color: rgb(128, 255, 128);
+    background-color: rgb(255, 220, 128);
     padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     font-size: 30px;
-    color: black;
-    font-weight: bold;
 }
 
 .comments-container {
-    background-color: rgb(128, 255, 128);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    background-color: rgb(255, 220, 128);
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    color: black;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -133,7 +102,7 @@ body {
 }
 
 .mb-3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 30px;
     color: black;
@@ -145,6 +114,12 @@ body {
 
 .mb-3 label{
     width: 320px;
+}
+
+#comment-message::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
+    font-weight: 500;
 }
 
 :root {
@@ -178,7 +153,7 @@ body {
 
 .comment-name {
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .comment-message {
@@ -210,31 +185,30 @@ body {
 }
 
 .timer-container {
-    background-color: rgb(64, 64, 64);
-    padding: 14px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     color: white;
 }
 
 .gallery-container {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(255, 255, 255);
     gap: 20px;
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .shop-container {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(255, 255, 255);
     padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     color: black;
-    font-weight: bold;
 }
 
 .gallery-item:hover {
@@ -243,16 +217,8 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .title {
-      font-size: 20px;
-    }
-  
-    .subtitle {
-      font-size: 12px;
-    }
-
     .timer-container{
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .shop-container{
@@ -269,39 +235,28 @@ body {
     }
 
     .news-title {
-        font-weight: bold;
         font-size: 2.5vw;
-        color: rgb(128, 0, 0);
         padding-left: 4px;
     }
     
     .news-content {
         font-size: 2vw;
-        color: rgb(0, 0, 0);
         padding-top: 20px;
     }
 
     .news-container {
-        gap: 10px;
+        gap: 20px;
     }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    .title {
-      font-size: 26px;
-    }
-  
-    .subtitle {
-      font-size: 16px;
-    }
-  
     .timer-container{
-        font-size: 15px;
+        font-size: 13.5px;
     }
 
     .shop-container{
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .gallery-item {
@@ -309,46 +264,57 @@ body {
         height: 28%;
     }
 
+    .news-title {
+        font-size: 2.2vw;
+        padding-left: 4px;
+    }
+
+    .news-content {
+        font-size: 1.6vw;
+        padding-top: 20px;
+    }
+
+    .news-item {
+        width: 90vw;
+    }
+
     .news-container {
         gap: 20px;
     }
     
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {}
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {}
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .title {
-        font-size: 32px;
-    }
-
     .register {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 32px;
         color: inherit;
         text-decoration: none;
     }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
     .timer-container{
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .shop-container{
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .gallery-item {
-        width: 14%;
-        height: 14%;
+        width: 15%;
+        height: 15%;
+    }
+
+    .news-title {
+        font-size: 1.2vw;
+        padding-left: 4px;
+    }
+
+    .news-content {
+        font-size: 0.8vw;
+    }
+
+    .news-item {
+        width: 46vw;
     }
 
     .news-container {
