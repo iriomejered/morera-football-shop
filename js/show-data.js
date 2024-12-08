@@ -1,4 +1,4 @@
-function showData(){
+function showData() {
   const NAME = localStorage.getItem("name");
   document.getElementById("name").innerHTML = NAME;
 
